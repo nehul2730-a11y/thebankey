@@ -1,0 +1,257 @@
+.bank-docs-wrapper,
+.bank-docs-wrapper * {
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.bank-docs-wrapper {
+  --docs-theme: #074C3E;
+  --docs-theme-light: rgba(7, 76, 62, 0.05);
+  --docs-theme-hover: #0b6655;
+  --docs-border: #e2e8f0;
+  --docs-bg: #f8fafc;
+  background: var(--docs-bg);
+  padding: 50px 0;
+}
+
+/* Category Tab Selectors */
+.bank-docs-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.bank-docs-tab-btn {
+  background: #ffffff;
+  border: 1px solid var(--docs-border);
+  color: #475569;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease-in-out;
+}
+
+.bank-docs-tab-btn i {
+  font-size: 1.15rem;
+}
+
+.bank-docs-tab-btn:hover {
+  background: var(--docs-theme-light);
+  color: var(--docs-theme);
+  border-color: var(--docs-theme);
+}
+
+.bank-docs-tab-btn.active {
+  background: var(--docs-theme);
+  color: #ffffff;
+  border-color: var(--docs-theme);
+  box-shadow: 0 4px 12px rgba(7, 76, 62, 0.2);
+}
+
+/* Search Box styling */
+.bank-docs-search-container {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.bank-docs-search-input {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  border: 1px solid var(--docs-border);
+  background: #ffffff;
+  color: #1e293b;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bank-docs-search-input:focus {
+  outline: none;
+  border-color: var(--docs-theme);
+  box-shadow: 0 4px 20px rgba(7, 76, 62, 0.1);
+}
+
+.bank-docs-search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+/* Document Grid & Cards */
+.bank-docs-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(7, 76, 62, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.bank-docs-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+}
+
+.bank-docs-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--docs-theme);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid var(--docs-theme-light);
+  padding-bottom: 12px;
+}
+
+.bank-docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.bank-docs-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.bank-docs-item-check {
+  color: var(--docs-theme);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bank-docs-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bank-docs-item-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.bank-docs-item-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Callouts / Info Notifications */
+.bank-docs-info-box {
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #1e40af;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+}
+
+.bank-docs-info-box i {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.bank-docs-info-box h5 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #1e3a8a;
+}
+
+/* Print/Download Action Panel */
+.bank-docs-action-panel {
+  text-align: center;
+  background: var(--docs-theme-light);
+  border: 1px dashed rgba(7, 76, 62, 0.25);
+  border-radius: 18px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.bank-docs-action-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--docs-theme);
+  margin-bottom: 8px;
+}
+
+.bank-docs-action-text {
+  font-size: 0.92rem;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.bank-docs-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Help Widget Card */
+.bank-docs-help-card {
+  background: linear-gradient(135deg, var(--docs-theme) 0%, #0b6655 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 10px 35px rgba(7, 76, 62, 0.15);
+}
+
+.bank-docs-help-card h3 {
+  color: #ffffff !important;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.bank-docs-help-card p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+}
+
+.bank-docs-help-card .btn_theme {
+  border-color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .bank-docs-tabs {
+    gap: 8px;
+  }
+  .bank-docs-tab-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .bank-docs-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,212 @@
+/* Inner pages: solid white header (home uses transparent .index over hero) */
+.header-section.header-inner {
+    background-color: #ffffff;
+}
+
+.header-inner .navbar .navbar-toggler i {
+    color: #222E48;
+}
+
+/* Keep logo + hamburger above fixed mobile menu overlay (all pages) */
+@media (max-width: 1199.98px) {
+    .navbar-mobile-toggle {
+        position: relative;
+        z-index: 400;
+    }
+
+    .navbar-mobile-toggle > .navbar-brand,
+    .navbar-mobile-toggle > .navbar-toggler {
+        position: relative;
+        z-index: 310;
+    }
+}
+
+/* Home: mobile nav — full-screen cream overlay, links stacked on the left (matches hero) */
+@media (max-width: 1199.98px) {
+
+    .header-section.index #navbar-content {
+        transition: none !important;
+    }
+
+    .header-section.index #navbar-content.collapsing,
+    .header-section.index #navbar-content.show {
+        position: fixed;
+        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100% !important;
+        max-width: 100%;
+        margin: 0 !important;
+        padding: 88px 28px 32px;
+        min-height: 100vh;
+        height: auto !important;
+        max-height: none !important;
+        overflow-y: auto;
+        background: rgba(253, 250, 243, 0.96);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 280;
+        display: block !important;
+    }
+
+    .header-section.index #navbar-content.collapsing {
+        height: 100vh !important;
+    }
+
+    .header-section.index #navbar-content .main-menu {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+    }
+
+    .header-section.index #navbar-content .main-menu .navbar-nav {
+        margin-top: 8px;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .header-section.index #navbar-content .main-menu .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .header-section.index #navbar-content .main-menu .navbar-nav .nav-item .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #074c3e !important;
+    }
+
+    .header-section.index #navbar-content .main-menu .navbar-nav .nav-item .nav-link:hover,
+    .header-section.index #navbar-content .main-menu .navbar-nav .nav-item .nav-link:focus {
+        color: #053a30 !important;
+    }
+
+    .header-section.index #navbar-content .main-menu .navbar-nav .nav-item .nav-link.active {
+        color: #fcb650 !important;
+    }
+
+    .header-section.index #navbar-content .main-menu .navbar-nav .nav-item .nav-link.active::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-right: 12px;
+        border-radius: 50%;
+        background: #fcb650;
+        flex-shrink: 0;
+    }
+
+    .header-section.index #navbar-content .dropdown-menu {
+        margin-left: 20px !important;
+        padding-top: 0;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .header-section.index #navbar-content .dropdown-item {
+        color: #074c3e !important;
+        padding-left: 0;
+    }
+}
+
+/* About page — corporates & long-term aim */
+.about-corporates-card .card__content {
+    padding: 28px 32px;
+}
+
+.about-corporates-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.about-corporates-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: #074c3e;
+    font-size: 1.05rem;
+}
+
+.about-corporates-list li i {
+    color: #fcb650;
+    font-size: 1.25rem;
+}
+
+.about-corporates-etc {
+    font-weight: 500;
+    color: #51616a;
+    padding-left: 36px;
+}
+
+.about-aim-block {
+    background: linear-gradient(135deg, #f7fbfa 0%, #eef6f4 100%);
+    border: 1px solid #e1efec;
+    border-radius: 18px;
+    padding: 32px 28px;
+}
+
+.about-motto {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #074c3e;
+    margin: 12px 0 20px;
+    line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+    .about-aim-block {
+        padding: 40px 44px;
+    }
+    .about-motto {
+        font-size: 2rem;
+    }
+}
+
+/* Home: Animate.css — hide until scroll / immediate reveal */
+.home-animate-on-scroll {
+    --animate-duration: 0.85s;
+}
+
+.home-animate-prep {
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-animate-prep {
+        opacity: 1;
+    }
+    .home-animate-on-scroll.animate__animated {
+        animation: none !important;
+    }
+}
+
+/* Sticky header styles */
+.header-section.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: box-shadow 0.2s, background-color 0.2s;
+}
+.section__content .section__content-inner ul, .section__content .banner__content-inner ul, .banner__content .section__content-inner ul, .banner__content .banner__content-inner ul {
+    display: flex;
+    align-items: center;
+    row-gap: 16px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
