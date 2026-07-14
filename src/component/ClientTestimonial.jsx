@@ -14,9 +14,9 @@ const ClientTestimonial = () => {
                             <span className="section__header-sub-title headingFour wow fadeInDown" data-wow-duration="0.8s" style={{ visibility: 'visible', animationDuration: '0.8s', animationName: 'fadeInDown' }}>Client Testimonials</span>
                             <h2 className="section__header-title wow fadeInUp" data-wow-duration="0.8s" style={{ visibility: 'visible', animationDuration: '0.8s', animationName: 'fadeInUp' }}>Success Stories Shared
                                 by Our Customers</h2>
-                            <p className="section__header-content wow fadeInDown" data-wow-duration="0.8s" style={{ visibility: 'visible', animationDuration: '0.8s', animationName: 'fadeInDown' }}>Feel free to
-                                customize the text with actual client testimonials, ensuring you have their permission to
-                                use their names and occupations</p>
+                            <p className="section__header-content wow fadeInDown" data-wow-duration="0.8s" style={{ visibility: 'visible', animationDuration: '0.8s', animationName: 'fadeInDown' }}>
+                                Hear from our happy homeowners who found the perfect loan options and competitive interest rates with our professional loan advisory services.
+                            </p>
                         </div>
                     </div>
                 </div>

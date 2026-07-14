@@ -118,44 +118,7 @@ const ChooseUs = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="loan-reviews_card card wow fadeInUp" data-wow-duration="0.8s">
-                                            <div className="loan-reviews__part-one">
-                                                <div className="loan-reviews__thumb">
-                                                    <img src={loanReviewsLogo4} alt="image" />
-                                                </div>
-                                                <div className="loan-reviews__review">
-                                                    <p className="rating"> 4.9</p>
-                                                    <div className="d-flex gap-2 flex-column">
-                                                        <div className="star_review">
-                                                            <i className="bi bi-star-fill star-active"></i>
-                                                            <i className="bi bi-star-fill star-active"></i>
-                                                            <i className="bi bi-star-fill star-active"></i>
-                                                            <i className="bi bi-star-fill star-active"></i>
-                                                            <i className="bi bi-star-half star-active"></i>
-                                                        </div>
-                                                        <p className="fs-small">Average Review</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="loan-reviews__part-two">
-                                                <div className="reviews-heading">
-                                                    <h4 className="reviews-heading__title">Construction Loans</h4>
-                                                    <p className="reviews-heading__content">India's Largest online mortgage
-                                                        lender</p>
-                                                </div>
-                                                <div className="reviews-inner">
-                                                    <ul>
-                                                        <li><i className="bi bi-check2-circle"></i> Certified pre-approval
-                                                            Process</li>
-                                                        <li><i className="bi bi-check2-circle"></i> Online Application Available
-                                                            24/7</li>
-                                                        <li><i className="bi bi-check2-circle"></i>Find a Quote Easily</li>
-                                                        <li><i className="bi bi-check2-circle"></i>100% Online Refinance</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
 
-                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-12">

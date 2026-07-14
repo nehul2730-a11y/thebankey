@@ -126,6 +126,11 @@ const Header = () => {
                         Bank Documents
                       </NavLink>
                     </li>
+                    <li className="nav-item">
+                      <NavLink className={navLinkClass} end to="/cibil">
+                        CIBIL Score
+                      </NavLink>
+                    </li>
 
                     {/* Dropdown */}
                     <li className="nav-item dropdown">

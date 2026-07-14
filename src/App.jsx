@@ -10,6 +10,7 @@ import LoanComparison from "./pages/LoanComparison";
 import EligibilityLTVCalculator from "./pages/EligibilityLTVCalculator";
 import BankDocuments from "./pages/BankDocuments";
 import Roi from "./pages/Roi";
+import Cibil from "./pages/Cibil";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/eligibility-calculator" element={<EligibilityLTVCalculator />} />
           <Route path="/bank-documents" element={<BankDocuments />} />
           <Route path="/roi" element={<Roi />} />
+          <Route path="/cibil" element={<Cibil />} />
         </Route>
       </Routes>
     </BrowserRouter>
