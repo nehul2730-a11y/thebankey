@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 import "./Roi.css";
@@ -544,10 +545,10 @@ const Roi = () => {
                   <p>
                     Don't settle for standard rates. Our home loan experts coordinate with top-tier lenders to unlock exclusive concessional rate structures customized for your profile, completely free of charge.
                   </p>
-                  <a href="/contact" className="btn_theme btn_theme_active px-5 py-3 fs-5">
+                  <Link to="/contact" className="btn_theme btn_theme_active px-5 py-3 fs-5">
                     Speak with an Expert
                     <i className="bi bi-arrow-up-right"></i>
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
             </div>

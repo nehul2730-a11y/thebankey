@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 import "./EligibilityLTVCalculator.css";
@@ -577,11 +578,11 @@ const EligibilityLTVCalculator = () => {
 
                   {/* CTA button */}
                   <div className="mt-4">
-                    <a href="/contact" className="btn_theme btn_theme_active w-100 justify-content-center">
+                    <Link to="/contact" className="btn_theme btn_theme_active w-100 justify-content-center">
                       Apply for Pre-Approval
                       <i className="bi bi-arrow-up-right"></i>
                       <span style={{ top: "53.7969px", left: "42.5px" }}></span>
-                    </a>
+                    </Link>
                   </div>
 
                 </div>

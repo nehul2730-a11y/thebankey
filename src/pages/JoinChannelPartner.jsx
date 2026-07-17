@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 
@@ -358,12 +359,12 @@ const JoinChannelPartner = () => {
                       </p>
                     </div>
                     <div className="col-md-4 text-md-end mt-3 mt-md-0">
-                      <a href="/contact" className="btn_theme">
+                      <Link to="/contact" className="btn_theme">
                         Contact Support
                         <i className="bi bi-arrow-up-right" />
                         <span style={{ "top": "-15.958px", "left": "32.8125px" }}></span>
                         <span style={{ "top": "34.4063px", "left": "64.5313px" }}></span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
