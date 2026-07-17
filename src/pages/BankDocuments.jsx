@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 import "./BankDocuments.css";
@@ -296,10 +297,10 @@ const BankDocuments = () => {
                     Our experienced advisors can help you verify your documents and handle 
                     the paperwork directly with our partner banks for free.
                   </p>
-                  <a href="/contact" className="btn_theme px-4 py-2 text-white border-white">
+                  <Link to="/contact" className="btn_theme px-4 py-2 text-white border-white">
                     Speak to our Expert
                     <i className="bi bi-arrow-up-right"></i>
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
             </div>

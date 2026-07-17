@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import heroArrow from "../assets/images/hero_vector_arrow.png";
 import chooseVector from "../assets/images/choose_vector.png";
 import chooseUs from "../assets/images/choose_us.png";
@@ -53,9 +54,9 @@ const ChooseUs = () => {
                             </div>
 
 
-                            <a href="/about" className="btn_theme btn_theme_active mt_40">
+                            <Link to="/about" className="btn_theme btn_theme_active mt_40">
                                 Read More <i className="bi bi-arrow-up-right"></i><span style={{ top: "53.7969px", left: "42.5px" }}></span>
-                            </a>
+                            </Link>
 
                         </div>
                     </div>
@@ -122,9 +123,9 @@ const ChooseUs = () => {
                                     </div>
                                 </div>
                                 <div className="col-12">
-                                    <div className="section__cta wow fadeInUp" data-wow-duration="0.8s">
-                                        <a href="/loan-comparison" className="btn_theme btn_theme_active">See All Review Loan<i className="bi bi-arrow-up-right"></i><span style={{ top: "53.7969px", left: "42.5px" }}></span></a>
-                                    </div>
+                                     <div className="section__cta wow fadeInUp" data-wow-duration="0.8s">
+                                         <Link to="/loan-comparison" className="btn_theme btn_theme_active">See All Review Loan<i className="bi bi-arrow-up-right"></i><span style={{ top: "53.7969px", left: "42.5px" }}></span></Link>
+                                     </div>
                                 </div>
                             </div>
                         </div>

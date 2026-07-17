@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 
@@ -141,12 +142,12 @@ const LoanComparison = () => {
                         <p className="small text-muted mb-3 text-center">
                           <span className="fw-bold">Provider:</span> {loan.popularBanks.join(", ")}
                         </p>
-                        <a href="/contact" className="btn_theme w-100 justify-content-center">
+                        <Link to="/contact" className="btn_theme w-100 justify-content-center">
                           Apply Now
                           <i className="bi bi-arrow-up-right" />
                           <span style={{ "top": "-15.958px", "left": "32.8125px" }}></span>
                           <span style={{ "top": "34.4063px", "left": "64.5313px" }}></span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -164,12 +165,12 @@ const LoanComparison = () => {
                     Our financial experts can help you compare and select the perfect loan product tailored to your unique profile.
                   </p>
                   <div>
-                    <a href="/contact" className="btn_theme btn_theme_active btn-lg px-5 me-md-3 mb-3 mb-md-0" style={{ border: 'none' }}>
+                    <Link to="/contact" className="btn_theme btn_theme_active btn-lg px-5 me-md-3 mb-3 mb-md-0" style={{ border: 'none' }}>
                       Talk to an Expert
                       <i className="bi bi-arrow-up-right" />
                       <span style={{ "top": "-15.958px", "left": "32.8125px" }}></span>
                       <span style={{ "top": "34.4063px", "left": "64.5313px" }}></span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </AnimateOnScroll>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 
@@ -377,9 +378,9 @@ const JoinEmployee = () => {
                       </p>
                     </div>
                     <div className="col-md-4 text-md-end mt-3 mt-md-0">
-                      <a href="/contact" className="btn btn-outline-primary">
+                      <Link to="/contact" className="btn btn-outline-primary">
                         Contact HR
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

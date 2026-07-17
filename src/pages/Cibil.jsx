@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../component/shared/PageBanner";
 import AnimateOnScroll from "../component/shared/AnimateOnScroll";
 import "./Cibil.css";
@@ -681,10 +682,10 @@ const Cibil = () => {
           <p className="cibil-cta-desc">
             Let our home loan specialists review your CIBIL standing and recommend the best banking partner for your profile. Get professional advisory at zero cost!
           </p>
-          <a href="/contact" className="cibil-cta-btn">
+          <Link to="/contact" className="cibil-cta-btn">
             Get Free Consultation
             <i className="bi bi-arrow-right-short"></i>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
