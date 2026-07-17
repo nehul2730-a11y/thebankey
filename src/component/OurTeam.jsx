@@ -3,8 +3,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination, Autoplay } from "swiper/modules";
-import ClientV2Img from "../assets/images/client4-v2.jpg";
-import QuoteImg from "../assets/images/quote4.png";
 import heroDollar from "../assets/images/hero_vector_dollar.png";
 import heroMessage from "../assets/images/hero_vector_message.png";
 
