@@ -353,7 +353,6 @@ const Roi = () => {
                           <th>Salaried (ROI p.a.)</th>
                           <th>Self-Employed (ROI p.a.)</th>
                           <th>Max LTV</th>
-                          <th>Processing Fees</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -373,7 +372,6 @@ const Roi = () => {
                                 <span className="roi-badge-rate">{bank.selfEmployed}</span>
                               </td>
                               <td>{bank.ltv}</td>
-                              <td>{bank.fee}</td>
                             </tr>
                           ))
                         ) : (

@@ -83,8 +83,7 @@ const LoanComparison = () => {
                 <div className="text-center mb-5">
                   <h2 className="section__content-title mb-3">Compare Top Home Loans</h2>
                   <p className="section__content-text">
-                    Finding the right home loan doesn't have to be complicated. Compare interest rates,
-                    processing fees, and loan tenures across top banking partners to make an informed
+                    Finding the right home loan doesn't have to be complicated. Compare interest rates and loan tenures across top banking partners to make an informed
                     decision for your dream home.
                   </p>
                 </div>
@@ -100,7 +99,7 @@ const LoanComparison = () => {
                 >
                   <div className="loan-reviews_card card h-100 p-4" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px' }}>
                     <div className="loan-reviews__part-one w-100 p-0 d-flex flex-row align-items-center justify-content-between gap-3">
-                      <div 
+                      <div
                         className="loan-reviews__thumb d-flex align-items-center justify-content-center m-0"
                         style={{ backgroundColor: 'rgba(7, 76, 62, 0.05)', width: '80px', height: '80px', borderRadius: '16px' }}
                       >
@@ -113,7 +112,7 @@ const LoanComparison = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="loan-reviews__part-two position-relative d-flex flex-column w-100 p-0 mt-2" style={{ borderLeft: 'none' }}>
                       <style>
                         {`
