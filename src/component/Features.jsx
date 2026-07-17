@@ -20,14 +20,14 @@ const defaultFeatures = [
 
 const Feature = ({
   subTitle = "Featured Services",
-  heading = "Empowering You with Loan Knowledge and Comparison Tools",
+  heading = "Empowering with best knowledge and comparison tools",
   intro = "We simplify your loan search and help you make better decisions.",
   items = defaultFeatures,
   cardHref = "/service-details",
 }) => {
   return (
     <section className="feature section">
-      
+
       {/* Animation */}
       <div className="animation">
         <img src={heroDollar} alt="img" />
@@ -35,12 +35,12 @@ const Feature = ({
       </div>
 
       <div className="container">
-        
+
         {/* Header */}
         <div className="row justify-content-center">
           <div className="col-lg-9">
             <div className="section__header text-center">
-              
+
               <span className="headingFour section__header-sub-title headingFour">
                 {subTitle}
               </span>
@@ -61,13 +61,13 @@ const Feature = ({
         <div className="row">
           <div className="col-12">
             <div className="feature_slider">
-              
+
               <div className="row">
                 {items.map((item, index) => (
                   <div className="col-md-4" key={index}>
-                    
+
                     <div className="card card--custom">
-                      
+
                       {/* Icon (optional replace with SVG component) */}
                       <div className="card__icon">
                         <i className="bi bi-bank" style={{ fontSize: "30px" }}></i>

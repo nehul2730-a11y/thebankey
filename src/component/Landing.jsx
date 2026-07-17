@@ -31,15 +31,14 @@ const Landing = () => {
               </span>
 
               <h1 className="display-3">
-                Find the {" "}
+                Find a path for your
                 <span className="word d-inline-flex">
-                  {"Perfect ".split("").map((letter, i) => (
+                  {"Dream ".split("").map((letter, i) => (
                     <span key={i} className="letter">
                       {letter}
                     </span>
                   ))}
-                </span>{" "}
-                Home for your Dream Home
+                </span>{" "} Home
               </h1>
 
               <p>
