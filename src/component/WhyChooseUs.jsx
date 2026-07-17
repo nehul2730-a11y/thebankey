@@ -53,8 +53,8 @@ const ChooseUs = () => {
                             </div>
 
 
-                            <a href="/service-details" className="btn_theme btn_theme_active mt_40">
-                                Read More <i className="bi bi-arrow-up-right"></i>
+                            <a href="/about" className="btn_theme btn_theme_active mt_40">
+                                Read More <i className="bi bi-arrow-up-right"></i><span style={{ top: "53.7969px", left: "42.5px" }}></span>
                             </a>
 
                         </div>

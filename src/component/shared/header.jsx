@@ -12,6 +12,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const collapseRef = useRef(null);
   const [navOpen, setNavOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,7 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    setDropdownOpen(false);
     const el = collapseRef.current;
     if (!el?.classList.contains("show")) return;
     if (window.matchMedia("(min-width: 1200px)").matches) return;
@@ -51,6 +53,7 @@ const Header = () => {
     };
     const onHidden = () => {
       setNavOpen(false);
+      setDropdownOpen(false);
       unlockScroll();
     };
     el.addEventListener("shown.bs.collapse", onShown);
@@ -67,6 +70,13 @@ const Header = () => {
     const el = collapseRef.current;
     if (!el) return;
     Collapse.getOrCreateInstance(el).toggle();
+  };
+
+  const handleDropdownToggle = (e) => {
+    e.preventDefault();
+    if (window.matchMedia("(max-width: 1199.98px)").matches) {
+      setDropdownOpen(!dropdownOpen);
+    }
   };
 
   return (
@@ -133,17 +143,17 @@ const Header = () => {
                     </li>
 
                     {/* Dropdown */}
-                    <li className="nav-item dropdown">
+                    <li className={`nav-item dropdown${dropdownOpen ? " show" : ""}`}>
                       <a
-                        className="nav-link dropdown-toggle"
+                        className={`nav-link dropdown-toggle${dropdownOpen ? " show" : ""}`}
                         href="#"
                         role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
+                        aria-expanded={dropdownOpen}
+                        onClick={handleDropdownToggle}
                       >
                         Join Us
                       </a>
-                      <ul className="dropdown-menu">
+                      <ul className={`dropdown-menu${dropdownOpen ? " show" : ""}`}>
                         <li>
                           <NavLink className="dropdown-item" to="/join-employee">
                             Join as a Employee
