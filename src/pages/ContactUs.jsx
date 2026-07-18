@@ -89,7 +89,10 @@ const ContactUs = () => {
                 </ul>
               </div>
               <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d379.06258078557187!2d77.31691493205693!3d28.581545651428698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sEscapade%20Adventures%20and%20Holidays!5e0!3m2!1sen!2sin!4v1784291981033!5m2!1sen!2sin" height="300" style={{ border: 0, width: '100%' }} allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6316688417137!2d77.3209296!3d28.5808212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce53fbc26da61%3A0x563f5b211573a0b2!2sTheBankey!5e0!3m2!1sen!2sin!4v1784345357543!5m2!1sen!2sin"
+                  height="300" style={{ border: 0, width: '100%' }} allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
               </div>
             </div>
             <div className="col-lg-7">
