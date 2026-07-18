@@ -22,6 +22,15 @@ const Footer = () => {
                                     <li><a href="#">Privacy policy</a></li>
                                     <li><a href="#">Terms & Conditions</a></li>
                                     <li><Link to="/contact">Contact us</Link></li>
+                                    <li>
+                                        <a
+                                            href="https://g.page/r/CbKgcxUhWz9WEAI/review"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Feedback
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="social">

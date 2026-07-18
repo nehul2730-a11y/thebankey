@@ -179,6 +179,16 @@ const Header = () => {
                         Contact us
                       </NavLink>
                     </li>
+                    <li className="nav-item">
+                      <a
+                        className="nav-link"
+                        href="https://g.page/r/CbKgcxUhWz9WEAI/review"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Feedback
+                      </a>
+                    </li>
                   </ul>
 
                 </div>
