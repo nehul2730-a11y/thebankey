@@ -20,6 +20,7 @@ const HomeLoanCalculator = () => {
   const [deposit, setDeposit] = useState(10);
   const [loanType, setLoanType] = useState(10);
   const [interest, setInterest] = useState(8); // Default effective interest
+  const [loanAmountInput, setLoanAmountInput] = useState("500000");
   const [depositInput, setDepositInput] = useState("10");
   const [interestInput, setInterestInput] = useState("8");
 
@@ -29,10 +30,26 @@ const HomeLoanCalculator = () => {
     return Number.isFinite(parsed) ? parsed : fallback;
   };
 
-  const handleLoanAmountChange = (e) => {
+  const handleLoanAmountSliderChange = (e) => {
     const parsedAmount = safeNumber(e.target.value, loanAmount);
     const validatedAmount = clamp(parsedAmount, 100000, 50000000);
     setLoanAmount(validatedAmount);
+    setLoanAmountInput(String(validatedAmount));
+  };
+
+  const handleLoanAmountInputChange = (e) => {
+    const rawValue = e.target.value;
+    if (!/^\d*$/.test(rawValue)) return;
+    setLoanAmountInput(rawValue);
+    if (rawValue === "") return;
+    const parsedAmount = safeNumber(rawValue, 0);
+    setLoanAmount(clamp(parsedAmount, 100000, 50000000));
+  };
+
+  const handleLoanAmountBlur = () => {
+    const normalized = clamp(safeNumber(loanAmountInput, loanAmount), 100000, 50000000);
+    setLoanAmount(normalized);
+    setLoanAmountInput(String(normalized));
   };
 
   const handleDepositChange = (e) => {
@@ -91,13 +108,20 @@ const HomeLoanCalculator = () => {
               <label>Loan amount (INR)</label>
               <span className="hlc-slider-value">{formatINR(loanAmount)}</span>
               <input
+                type="text"
+                inputMode="numeric"
+                value={loanAmountInput}
+                onChange={handleLoanAmountInputChange}
+                onBlur={handleLoanAmountBlur}
+              />
+              <input
                 type="range"
                 inputMode="numeric"
                 min={100000}
                 max={50000000}
                 step={50000}
                 value={loanAmount}
-                onChange={handleLoanAmountChange}
+                onChange={handleLoanAmountSliderChange}
               />
             </div>
             <div className="hlc-filter-group">
