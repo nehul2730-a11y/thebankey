@@ -1,9 +1,55 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { testimonialData } from "../constants/testimonials";
-
 import { Pagination, Autoplay } from "swiper/modules";
+
+const TestimonialCard = ({ testimonial }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const maxLength = 201;
+    const shouldTruncate = testimonial.review && testimonial.review.length > maxLength;
+
+    const toggleReadMore = () => {
+        setIsExpanded((prev) => !prev);
+    };
+
+    const displayText = shouldTruncate && !isExpanded
+        ? `${testimonial.review.slice(0, maxLength)}...`
+        : testimonial.review;
+
+    return (
+        <div className="card card--custom">
+            <div className="testimonials__author-review">
+                <div className="star_review mb-3">
+                    <i className="bi bi-star-fill star-active"></i>
+                    <i className="bi bi-star-fill star-active"></i>
+                    <i className="bi bi-star-fill star-active"></i>
+                    <i className="bi bi-star-fill star-active"></i>
+                    <i className="bi bi-star-half star-active"></i>
+                </div>
+                <p className="text-start mb-1">{displayText}</p>
+                {shouldTruncate && (
+                    <button
+                        type="button"
+                        onClick={toggleReadMore}
+                        className="btn btn-link p-0 text-decoration-none fw-semibold border-0 bg-transparent"
+                        style={{ fontSize: "0.9rem", cursor: "pointer", color: "var(--primary-color, #0d6efd)" }}
+                    >
+                        {isExpanded ? "Read Less" : "Read More"}
+                    </button>
+                )}
+            </div>
+            <div className="testimonials__author">
+                <div className="author__content">
+                    <h5 className="author__title">{testimonial.name}</h5>
+                    <p className="author__desi">{testimonial.designation}</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const ClientTestimonial = () => {
     return (
         <section className="testimonials section">
@@ -36,46 +82,16 @@ const ClientTestimonial = () => {
                             >
                                 {testimonialData.map((testimonial) => (
                                     <SwiperSlide key={testimonial.id}>
-                                        <div className="card card--custom ">
-                                            <div className="testimonials__author-review">
-                                                <div className="star_review mb-3">
-                                                    <i className="bi bi-star-fill star-active"></i>
-                                                    <i className="bi bi-star-fill star-active"></i>
-                                                    <i className="bi bi-star-fill star-active"></i>
-                                                    <i className="bi bi-star-fill star-active"></i>
-                                                    <i className="bi bi-star-half star-active"></i>
-                                                </div>
-                                                <p className="text-start">{testimonial.review}</p>
-                                            </div>
-                                            <div className="testimonials__author">
-
-                                                <div className="author__content">
-                                                    <h5 className="author__title">{testimonial.name}</h5>
-                                                    <p className="author__desi">{testimonial.designation}</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <TestimonialCard testimonial={testimonial} />
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
                         </div>
                     </div>
-
-                    <div className="col-12">
-
-                        <div className="slider-navigation wow fadeInRight" data-wow-duration="1.2s" style={{ visibility: 'visible', animationDuration: '1.2s', animationName: 'fadeInRight' }}>
-                            <button className="prev-testimonials pagination-button">
-                                <i className="bi bi-chevron-left"></i>
-                            </button>
-
-                            <button className="next-testimonials pagination-button">
-                                <i className="bi bi-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
-            </div >
-        </section >
+            </div>
+        </section>
     );
-}
+};
+
 export default ClientTestimonial;
